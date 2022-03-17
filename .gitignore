@@ -1,0 +1,4 @@
+.vscode/
+*.class
+config.json
+run.sh
