@@ -1,4 +1,4 @@
-package netjava.commands.fun;
+package netjava.commands.AOL;
 
 import org.javacord.api.entity.message.MessageAuthor;
 import org.javacord.api.event.message.MessageCreateEvent;

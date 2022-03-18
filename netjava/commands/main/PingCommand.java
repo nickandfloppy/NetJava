@@ -10,7 +10,7 @@ public class PingCommand implements MessageCreateListener {
     public static Command cmd = new Command("ping");
     @Override
     public void onMessageCreate(MessageCreateEvent event) {
-        if (event.getMessageContent().equalsIgnoreCase(Bot.botConfig.prefix + cmd.command)) {
+        if (event.getMessageContent().equalsIgnoreCase(Bot.config.prefix + cmd.command)) {
             String latency = Long.toString(Bot.api.getLatestGatewayLatency().toMillis());
             event.getChannel().sendMessage(":ping_pong: Pong! **" + latency + "ms**");
         }
