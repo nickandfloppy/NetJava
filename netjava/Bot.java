@@ -4,13 +4,15 @@ import org.javacord.api.DiscordApi;
 import org.javacord.api.DiscordApiBuilder;
 
 import netjava.commands.main.*;
+import netjava.commands.fun.*;
 import netjava.util.*;
 
 public class Bot {
     public static Config botConfig;
     public static String version = "DEV-0.0.1";
     public static DiscordApi api;
-    public static Command[] commands = { WhoisCommand.cmd, PingCommand.cmd, AboutCommand.cmd, HelpCommand.cmd };
+    public static Command[] mainCommands = { WhoisCommand.cmd, PingCommand.cmd, AboutCommand.cmd, HelpCommand.cmd };
+    public static Command[] funCommands = { RollCommand.cmd };
 
     public static void main(String[] args) throws Exception {
         botConfig = new Config();
@@ -21,6 +23,7 @@ public class Bot {
         api.addMessageCreateListener(new PingCommand());
         api.addMessageCreateListener(new HelpCommand());
         api.addMessageCreateListener(new AboutCommand());
+        api.addMessageCreateListener(new RollCommand());
 
         System.out.println("Connected as user " + api.getYourself().getDiscriminatedName());
     }

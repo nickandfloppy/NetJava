@@ -18,16 +18,23 @@ public class HelpCommand implements MessageCreateListener {
 	public void onMessageCreate(MessageCreateEvent event) {
 		if (event.getMessageContent().equalsIgnoreCase(Bot.botConfig.prefix + cmd.command)) {
 			String mainCommands = "";
-			for (int i = 0; i < Bot.commands.length; i++) {
-				mainCommands +=  Bot.commands[i].command;
-				if (i != Bot.commands.length - 1) mainCommands += " | ";
+			for (int i = 0; i < Bot.mainCommands.length; i++) {
+				mainCommands +=  Bot.mainCommands[i].command;
+				if (i != Bot.mainCommands.length - 1) mainCommands += " | ";
+			}
+
+			String funCommands = "";
+			for (int i = 0; i < Bot.funCommands.length; i++) {
+				funCommands +=  Bot.funCommands[i].command;
+				if (i != Bot.funCommands.length - 1) funCommands += " | ";
 			}
 
 			EmbedBuilder embed = new EmbedBuilder()
 				.setTitle(Bot.api.getYourself().getName() + " Commands")
+				.addField("Fun", funCommands)
 				.addField("Main", mainCommands)
 				.setFooter("Run " + Bot.botConfig.prefix + "help [command] for command specific help")
-				.setColor(Color.blue);
+				.setColor(new Color(50, 106, 201));
 			event.getChannel().sendMessage(embed)
 				.exceptionally(ExceptionLogger.get(MissingPermissionsException.class));
 		}
