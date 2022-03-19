@@ -78,7 +78,7 @@ Command list copied from [WinBot's](https://github.com/CamK06/WinBot) help comma
 
 ### In Progress
 - [ ] Main Commands
-  - [ ]whois
+  - [ ] whois
 
 - [ ] Fun Commands
 
@@ -90,11 +90,11 @@ Command list copied from [WinBot's](https://github.com/CamK06/WinBot) help comma
 
 ### Done
 - [ ] Main Commands
-  - [X]about
-  - [X]ping
+  - [X] about
+  - [X] ping
 
 - [ ] Fun Commands
-  - [X]hackerman
+  - [X] hackerman
 
 - [ ] Image Manipulation Commands
 
