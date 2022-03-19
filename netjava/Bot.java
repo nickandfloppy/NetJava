@@ -16,6 +16,7 @@ public class Bot {
     public static DiscordApi api;
     public static Command[] mainCommands = { WhoisCommand.cmd, PingCommand.cmd, AboutCommand.cmd, HelpCommand.cmd };
     public static Command[] AOLCommands = { RollCommand.cmd };
+    public static Command[] funCommands = { HackermanCommand.cmd };
 
     public static void main(String[] args) throws Exception {
         try {
@@ -28,6 +29,7 @@ public class Bot {
         api = new DiscordApiBuilder().setToken(Bot.config.token).login().join();
 
         // Add a listener for each command
+        // TODO: Find a better way to do this
         api.addMessageCreateListener(new WhoisCommand());
         api.addMessageCreateListener(new PingCommand());
         api.addMessageCreateListener(new HelpCommand());
