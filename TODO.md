@@ -1,6 +1,8 @@
 # NetJava
 A multi-purpose Discord bot written in Java using the Javacord Library
 
+Command list copied from (WinBot's)[https://github.com/CamK06/WinBot] help command
+
 ### Todo
 - [ ] Main Commands
   - [ ]trivia
