@@ -5,76 +5,76 @@ Command list copied from [WinBot's](https://github.com/CamK06/WinBot) help comma
 
 ### Todo
 - [ ] Main Commands
-  - [ ]trivia
-  - [ ]baben
-  - [ ]help
-  - [ ]lb
-  - [ ]togglelevelmsg
-  - [ ]mcinfo
-  - [ ]rank
-  - [ ]remind
-  - [ ]serverinfo
-  - [ ]serverstats
-  - [ ]subscribe
-  - [ ]uptime
-  - [ ]weather
-  - [ ]weatherdata
-  - [ ]wiki
+  - [ ] trivia
+  - [ ] baben
+  - [ ] help
+  - [ ] lb
+  - [ ] togglelevelmsg
+  - [ ] mcinfo
+  - [ ] rank
+  - [ ] remind
+  - [ ] serverinfo
+  - [ ] serverstats
+  - [ ] subscribe
+  - [ ] uptime
+  - [ ] weather
+  - [ ] weatherdata
+  - [ ] wiki
 
 - [ ] Fun Commands
-  - [ ]img
-  - [ ]spam
-  - [ ]2022
-  - [ ]bed
-  - [ ]bsod
-  - [ ]cat
-  - [ ]decide
-  - [ ]dl
-  - [ ]8ball
-  - [ ]fortune
-  - [ ]http
-  - [ ]inspire
-  - [ ]lmgtfy
-  - [ ]rory
-  - [ ]urban
-  - [ ]wikihow
+  - [ ] img
+  - [ ] spam
+  - [ ] 2022
+  - [ ] bed
+  - [ ] bsod
+  - [ ] cat
+  - [ ] decide
+  - [ ] dl
+  - [ ] 8ball
+  - [ ] fortune
+  - [ ] http
+  - [ ] inspire
+  - [ ] lmgtfy
+  - [ ] rory
+  - [ ] urban
+  - [ ] wikihow
 
 - [ ] Image Manipulation Commands
-  - [ ]bobross
-  - [ ]chaos
-  - [ ]deepfry
-  - [ ]enlarge
-  - [ ]explode
-  - [ ]graph
-  - [ ]gray
-  - [ ]haah
-  - [ ]hooh
-  - [ ]implode
-  - [ ]invert
-  - [ ]magik
-  - [ ]overlay
-  - [ ]resize
-  - [ ]reverse
-  - [ ]spin
-  - [ ]tv
-  - [ ]waaw
-  - [ ]wall
-  - [ ]woow
+  - [ ] bobross
+  - [ ] chaos
+  - [ ] deepfry
+  - [ ] enlarge
+  - [ ] explode
+  - [ ] graph
+  - [ ] gray
+  - [ ] haah
+  - [ ] hooh
+  - [ ] implode
+  - [ ] invert
+  - [ ] magik
+  - [ ] overlay
+  - [ ] resize
+  - [ ] reverse
+  - [ ] spin
+  - [ ] tv
+  - [ ] waaw
+  - [ ] wall
+  - [ ] woow
 
 - [ ] Staff Commands
-  - [ ]purge
-  - [ ]mute
-  - [ ]poll
+  - [ ] purge
+  - [ ] mute
+  - [ ] poll
 
 - [ ] Owner Commands
-  - [ ]blacklist
-  - [ ]chanexec
-  - [ ]cmdexec
-  - [ ]dosexec
-  - [ ]ev
-  - [ ]kill
-  - [ ]psexec
-  - [ ]sudo
+  - [ ] blacklist
+  - [ ] chanexec
+  - [ ] cmdexec
+  - [ ] dosexec
+  - [ ] ev
+  - [ ] kill
+  - [ ] psexec
+  - [ ] sudo
 
 ### In Progress
 - [ ] Main Commands
