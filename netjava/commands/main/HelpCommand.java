@@ -10,6 +10,7 @@ import org.javacord.api.util.logging.ExceptionLogger;
 import org.javacord.api.exception.MissingPermissionsException;
 
 import netjava.Bot;
+import netjava.commands.Commands;
 import netjava.util.*;
 
 public class HelpCommand implements MessageCreateListener {
@@ -18,31 +19,31 @@ public class HelpCommand implements MessageCreateListener {
 	public void onMessageCreate(MessageCreateEvent event) {
 		if (event.getMessageContent().equalsIgnoreCase(Bot.config.prefix + cmd.command)) {
 			String mainCommands = "`";
-			for (int i = 0; i < Bot.mainCommands.length; i++) {
-				mainCommands +=  Bot.mainCommands[i].command;
-				if (i != Bot.mainCommands.length - 1) mainCommands += "`, `";
+			for (int i = 0; i < Commands.mainInfo.length; i++) {
+				mainCommands +=  Commands.mainInfo[i].command;
+				if (i != Commands.mainInfo.length - 1) mainCommands += "`, `";
 				else mainCommands += "`";
 			}
 
 			String funCommands = "`";
-			for (int i = 0; i < Bot.funCommands.length; i++) {
-				funCommands +=  Bot.funCommands[i].command;
-				if (i != Bot.funCommands.length - 1) funCommands += "`, `";
+			for (int i = 0; i < Commands.funInfo.length; i++) {
+				funCommands +=  Commands.funInfo[i].command;
+				if (i != Commands.funInfo.length - 1) funCommands += "`, `";
 				else funCommands += "`";
 			}
 
 			String AOLCommands = "`";
-			for (int i = 0; i < Bot.AOLCommands.length; i++) {
-				AOLCommands +=  Bot.AOLCommands[i].command;
-				if (i != Bot.AOLCommands.length - 1) AOLCommands += "`, `";
+			for (int i = 0; i < Commands.AOLInfo.length; i++) {
+				AOLCommands +=  Commands.AOLInfo[i].command;
+				if (i != Commands.AOLInfo.length - 1) AOLCommands += "`, `";
 				else AOLCommands += "`";
 			}
 
 			EmbedBuilder embed = new EmbedBuilder()
 				.setTitle(Bot.api.getYourself().getName() + " Commands")
-				.addField("Main", mainCommands)
-				.addField("Fun", funCommands)
-				.addField("<a:ninacrazy:954394600494235718> AOL (// prefix)", AOLCommands)
+				.addField(Commands.Main.name, mainCommands)
+				.addField(Commands.Fun.name, funCommands)
+				.addField(Commands.AOL.name, AOLCommands)
 				.setFooter("Run " + Bot.config.prefix + "help [command] for command specific help")
 				.setColor(new Color(50, 106, 201));
 			event.getChannel().sendMessage(embed)
