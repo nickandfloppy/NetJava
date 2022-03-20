@@ -1,4 +1,4 @@
 .vscode/
 *.class
-config.json
+conf.json
 NetJava.jar
