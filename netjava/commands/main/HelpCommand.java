@@ -18,25 +18,22 @@ public class HelpCommand implements MessageCreateListener {
 	@Override
 	public void onMessageCreate(MessageCreateEvent event) {
 		if (event.getMessageContent().equalsIgnoreCase(Bot.config.prefix + cmd.command)) {
-			String mainCommands = "`";
+			String mainCommands = "";
 			for (int i = 0; i < Commands.mainInfo.length; i++) {
 				mainCommands +=  Commands.mainInfo[i].command;
-				if (i != Commands.mainInfo.length - 1) mainCommands += "`, `";
-				else mainCommands += "`";
+				if (i != Commands.mainInfo.length - 1) mainCommands += " | ";
 			}
 
-			String funCommands = "`";
+			String funCommands = "";
 			for (int i = 0; i < Commands.funInfo.length; i++) {
 				funCommands +=  Commands.funInfo[i].command;
-				if (i != Commands.funInfo.length - 1) funCommands += "`, `";
-				else funCommands += "`";
+				if (i != Commands.funInfo.length - 1) funCommands += " | ";
 			}
 
-			String AOLCommands = "`";
+			String AOLCommands = "";
 			for (int i = 0; i < Commands.AOLInfo.length; i++) {
 				AOLCommands +=  Commands.AOLInfo[i].command;
-				if (i != Commands.AOLInfo.length - 1) AOLCommands += "`, `";
-				else AOLCommands += "`";
+				if (i != Commands.AOLInfo.length - 1) AOLCommands += " | ";
 			}
 
 			EmbedBuilder embed = new EmbedBuilder()
@@ -49,5 +46,13 @@ public class HelpCommand implements MessageCreateListener {
 			event.getChannel().sendMessage(embed)
 				.exceptionally(ExceptionLogger.get(MissingPermissionsException.class));
 		}
+	}
+
+	public String getDescription(Command cmd) {
+		return cmd.description;
+	}
+
+	public String getUsage(Command cmd) {
+		return cmd.usage;
 	}
 }
