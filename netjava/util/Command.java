@@ -8,13 +8,13 @@ public class Command {
     public Command(String command) {
         this.command = command;
         this.description = null;
-        this.usage = "";
+        this.usage = null;
     }
 
     public Command(String command, String description) {
         this.command = command;
         this.description = description;
-        this.usage = "";
+        this.usage = null;
     }
 
     public Command(String command, String usage, String description) {
