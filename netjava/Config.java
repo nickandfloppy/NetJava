@@ -9,12 +9,14 @@ public class Config {
 	public String token;
 	public String prefix;
 	public String status;
+	public long ownerID;
 
 	public Config() throws Exception {
 		JSONObject js = parseConfig();
 		this.token = (String) js.get("token");
 		this.prefix = (String) js.get("prefix");
 		this.status = (String) js.get("status");
+		this.ownerID = (long) js.get("ownerID");
 	}
 
 	public static JSONObject parseConfig() throws Exception {

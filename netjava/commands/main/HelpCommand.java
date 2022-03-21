@@ -36,11 +36,18 @@ public class HelpCommand implements MessageCreateListener {
 				if (i != Commands.AOLInfo.length - 1) AOLCommands += " | ";
 			}
 
+			String ownerCommands = "";
+			for (int i = 0; i < Commands.ownerInfo.length; i++) {
+				ownerCommands +=  Commands.ownerInfo[i].command;
+				if (i != Commands.ownerInfo.length - 1) ownerCommands += " | ";
+			}
+
 			EmbedBuilder embed = new EmbedBuilder()
 				.setTitle(Bot.api.getYourself().getName() + " Commands")
 				.addField(Commands.Main.name, mainCommands)
 				.addField(Commands.Fun.name, funCommands)
 				.addField(Commands.AOL.name, AOLCommands)
+				.addField(Commands.Owner.name, ownerCommands)
 				.setFooter("Run " + Bot.config.prefix + "help [command] for command specific help")
 				.setColor(new Color(50, 106, 201));
 			event.getChannel().sendMessage(embed)

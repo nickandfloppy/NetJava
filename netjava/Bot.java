@@ -31,6 +31,7 @@ public class Bot {
         Commands.loadCategory(Commands.Main);
         Commands.loadCategory(Commands.Fun);
         Commands.loadCategory(Commands.AOL);
+        Commands.loadCategory(Commands.Owner);
 
         // Output the user the bot is logged in as to the console
         System.out.println("Connected as user " + api.getYourself().getDiscriminatedName());
