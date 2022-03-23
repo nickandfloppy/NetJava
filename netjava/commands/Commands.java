@@ -12,7 +12,7 @@ import netjava.util.*;
 public class Commands {
     // Define arrays of commands
     static MessageCreateListener[] mainCommands = { new WhoisCommand(), new PingCommand(), new AboutCommand(),  new HelpCommand() };
-    static MessageCreateListener[] funCommands = { new HackermanCommand(), new EightBallCommand() };
+    static MessageCreateListener[] funCommands = { new HackermanCommand(), new EightBallCommand(), new RateCommand() };
     static MessageCreateListener[] AOLCommands = { new RollCommand() };
     static MessageCreateListener[] ownerCommands = { new ExecCommand() };
 
@@ -30,6 +30,6 @@ public class Commands {
 
     public static Command[] mainInfo = { WhoisCommand.cmd, PingCommand.cmd, AboutCommand.cmd, HelpCommand.cmd };
     public static Command[] AOLInfo = { RollCommand.cmd };
-    public static Command[] funInfo = { HackermanCommand.cmd, EightBallCommand.cmd };
+    public static Command[] funInfo = { HackermanCommand.cmd, EightBallCommand.cmd, RateCommand.cmd };
     public static Command[] ownerInfo = { ExecCommand.cmd };
 }
